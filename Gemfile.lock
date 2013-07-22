@@ -1,0 +1,16 @@
+PATH
+  remote: .
+  specs:
+    noodall-redirects (0.0.1)
+
+GEM
+  remote: http://rubygems.org/
+  remote: http://gems.github.com/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (>= 1.0.0)
+  noodall-redirects!
