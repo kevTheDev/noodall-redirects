@@ -1,0 +1,12 @@
+<h1>New Redirect</h1>
+
+<%= form_for @redirect, :url => admin_redirects_path, :html => {:id => 'node-form'} do |f| %>
+
+  <%= f.error_messages %>
+
+  <%= render :partial => 'form', :locals => { :f => f } %>
+
+  <p class="fixed-form">
+    <input class="create" data-disable-with="Submitting..." id="redirect_submit" name="commit" type="submit" value="Create">
+    <a href="/admin/redirects" class="cancel">Cancel</a>  </p>
+<%- end %>

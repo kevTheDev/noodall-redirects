@@ -19,7 +19,7 @@ class Admin::RedirectsController < Noodall::Admin::BaseController
     end
   end
 
-  def show
+  def edit
     @redirect = RewriteRule.find(params[:id])
   end
 

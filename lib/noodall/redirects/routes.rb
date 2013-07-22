@@ -6,7 +6,7 @@ module Noodall
           app.routes.draw do
   
             namespace 'noodall/admin', :as => 'noodall_admin', :path => 'admin' do
-              resources :redirects
+              resources :redirects, except: [:show]
             end
             
           end

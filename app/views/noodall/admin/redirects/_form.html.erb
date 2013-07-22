@@ -1,0 +1,21 @@
+<p>
+  <span class="tooltip" title="Choose the type of redirect. 301 is a permanent redirect. 302 is a temporary redirect.">&nbsp;</span>
+  <%=f.label :rule_type, 'Type' %>
+  <span class="input-wrap">
+    <%= f.select :rule_type, %w{r301 r302} %>
+  </span>
+</p>
+<p>
+  <span class="tooltip" title="The url that this redirect is from. Include / before the address you want to redirect from e.g /switch. Do not include full website address.">&nbsp;</span>
+  <%=f.label :from %>
+  <span class="input-wrap">
+    <%= f.text_field :from %>
+  </span>
+</p>
+<p>
+  <span class="tooltip" title="The url to redirect to. For internal redirects include /before the URL you want to redirect to e.g /switch. Only include full website address including http:// if you are redirecting to an external website.">&nbsp;</span>
+  <%=f.label :to %>
+  <span class="input-wrap">
+    <%= f.text_field :to %>
+  </span>
+</p>
