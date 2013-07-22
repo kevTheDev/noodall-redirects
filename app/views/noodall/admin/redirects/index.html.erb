@@ -1,6 +1,6 @@
 <h1>Listing Redirects</h1>
 <ul class="choices">
-  <li><%= link_to "New", new_admin_redirect_path, class: "button" %></li>
+  <li><%= link_to "New", new_noodall_admin_redirect_path, class: "button" %></li>
 </ul>
 
 <%= will_paginate(@redirects, :previous_label => 'Previous', :next_label => 'Next') %>
@@ -18,9 +18,9 @@
 <% for redirect in @redirects -%>
     <tr class='redirect'>
       <td><%= redirect.rule_type %></td>
-      <td><%= link_to redirect.from, admin_redirect_path(redirect), :class => 'edit', :title => 'Edit this redirect' %></td>
+      <td><%= link_to redirect.from, edit_noodall_admin_redirect_path(redirect), :class => 'edit', :title => 'Edit this redirect' %></td>
       <td><%= redirect.to %></td>
-      <td><%= link_to 'Delete', admin_redirect_path(redirect), :confirm => 'Are you sure?', :method => :delete, :class => 'delete', :title => 'Delete this redirect' %></td>
+      <td><%= link_to 'Delete', noodall_admin_redirect_path(redirect), :confirm => 'Are you sure?', :method => :delete, :class => 'delete', :title => 'Delete this redirect' %></td>
     </tr>
 <% end %>
   </tbody>

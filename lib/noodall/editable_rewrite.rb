@@ -10,7 +10,7 @@ module Noodall
       request_path = build_path_from_env(env)
     
       unless asset_request?(request_path) # don't redirect for asset requests
-        if matched_rule = RewriteRule.find_by_from(request_path)
+        if matched_rule = ::Noodall::RewriteRule.find_by_from(request_path)
           rack_response = matched_rule.apply!(env)
           # Don't invoke the app if applying the rule returns a rack response
           return rack_response unless rack_response === true
